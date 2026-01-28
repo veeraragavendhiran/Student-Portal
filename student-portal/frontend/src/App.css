@@ -1,0 +1,108 @@
+/* --- Main App Layout --- */
+.App-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the app at least full screen height */
+  background-color: #1a1a1a;
+}
+
+.main-content {
+  flex-grow: 1; /* This makes the main content fill available space */
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto; /* Center the content area */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* --- Global Form/Dashboard Styles --- */
+/* (We keep these here so they apply to all pages) */
+form {
+  width: 100%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+form h2 {
+  text-align: center;
+  color: #7456be;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #ccc;
+}
+input[type='text'],
+input[type='password'],
+input[type='url'],
+select {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #7456be;
+  border-color: #7456be;
+}
+button {
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(45deg, #5e42a6, #7456be);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(116, 86, 190, 0.4);
+}
+
+/* --- Dashboard Specific --- */
+.dashboard-container {
+  background-color: #2a2a2a;
+  padding: 20px 30px;
+  border-radius: 12px;
+  border: 1px solid #444;
+}
+
+.dashboard-container h2 {
+  border-bottom: 2px solid #5e42a6;
+  padding-bottom: 10px;
+}
+
+.resources-list ul { list-style: none; padding: 0; }
+.resources-list li {
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.resources-list li strong { color: #5e42a6; font-size: 1.2em; }
+.resources-list li a { color: #8a72d3; text-decoration: none; font-weight: bold; }
+.resources-list li a:hover { text-decoration: underline; }
+.upload-form {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
